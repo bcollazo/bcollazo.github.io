@@ -18,7 +18,20 @@ html, body {
 
 body {
 	font-family: 'Oxygen', sans-serif;
+	color: #222;
 	margin: 0;
+}
+
+.cursive {
+	font-family: 'Itim', cursive;
+}
+
+.card {
+	padding: 20px;
+
+	border: 2px solid #ddd;
+	border-radius: 6px;
+	background: white;
 }
 
 /*===== HEADER =====*/
@@ -27,42 +40,66 @@ header {
 	padding: 60px 40px 40px 40px;
 }
 
-.card {
+header .card {
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 
-	border: 2px solid #ddd;
-	border-radius: 6px;
-	background: white;
-
 	display: grid;
-	grid-template-columns: 250px auto;
+	grid-template-columns: minmax(30%, 250px) auto;
 	grid-template-rows: auto 40px 40px auto;
 	grid-column-gap: 20px;
 }
 
-.card {
-	padding: 20px;
-}
-
-.card img {
+header .card img {
 	border-radius: 50%;
 	border: 6px solid #ddd;
 	width: 100%;
 	grid-row: 1 / -1;
 }
 
-.card div {
+header .card div {
 	color: #777;
 	font-size: 1.5em;
 	grid-column: 2;
 }
 
-blockquote {
+header blockquote {
 	font-size: 2em;
 	font-style: italic;
 	color: #0081BF;
 	text-align: center;
 	margin-bottom: 0;
+}
+
+/*===== SECTION 1 =====*/
+section {
+	background: white;
+	padding: 20px 40px;
+
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas:
+		"h h"
+		"p p";
+}
+
+section h2 {
+	font-size: 2em;
+	text-align: center;
+
+	grid-area: h;
+}
+
+.project {
+	background: radial-gradient(circle at 100% -120%, #0081BF, white 30%);
+	border-color: #0081BF;
+
+	font-size: 1.5em;
+	text-decoration: none;
+}
+
+.project p {
+	color: #777;
+	font-size: 0.8em;
 }
